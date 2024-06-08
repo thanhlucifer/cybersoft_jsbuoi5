@@ -36,7 +36,7 @@
                                 <input type="number" class="form-control" id="cutoffScore" name="cutoffScore">
                             </div>
                         </div>
-                       
+
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="area">Khu Vực:</label>
@@ -58,7 +58,8 @@
                                     <option value="0">0</option>
                                 </select>
                             </div>
-                        </div> <div class="col-md-4">
+                        </div>
+                        <div class="col-md-4">
                             <div class="form-group">
                                 <label for="score1">Điểm Môn 1:</label>
                                 <input type="number" class="form-control" id="score1" name="score1">
@@ -86,10 +87,56 @@
                 </div>
 
                 <div class="tab-pane fade" id="bai2" role="tabpanel" aria-labelledby="bai2-tab">
-
+                    <h2>Tính Tiền Điện</h2>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="name">Tên:</label>
+                                <input type="text" class="form-control" id="name" name="name">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="kwh">Số kWh tiêu thụ:</label>
+                                <input type="number" class="form-control" id="kwh" name="kwh">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary" onclick="calculateElectricityBill()">Tính Tiền</button>
+                        </div>
+                        <div class="col-12">
+                            <p id="result2"></p>
+                        </div>
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="bai3" role="tabpanel" aria-labelledby="bai3-tab">
-
+                    <h2>Tính Thuế Thu Nhập Cá Nhân</h2>
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="fullname">Họ Tên:</label>
+                                <input type="text" class="form-control" id="fullname" name="fullname">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="totalIncome">Tổng Thu Nhập Năm (triệu):</label>
+                                <input type="number" class="form-control" id="totalIncome" name="totalIncome">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="dependents">Số Người Phụ Thuộc:</label>
+                                <input type="number" class="form-control" id="dependents" name="dependents">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary" onclick="calculateTax()">Tính Thuế</button>
+                        </div>
+                        <div class="col-12">
+                            <p id="result3"></p>
+                        </div>
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="bai4" role="tabpanel" aria-labelledby="bai4-tab">
 
