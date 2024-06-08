@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container py-5">
+        <div class="d-flex align-items-start">
+            <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <button class="nav-link active" id="bai1-tab" data-bs-toggle="pill" data-bs-target="#bai1" type="button"
+                    role="tab" aria-controls="bai1" aria-selected="true">Bài tập 1</button>
+                <button class="nav-link" id="bai2-tab" data-bs-toggle="pill" data-bs-target="#bai2" type="button"
+                    role="tab" aria-controls="bai2" aria-selected="false">Bài tập 2</button>
+                <button class="nav-link" id="bai3-tab" data-bs-toggle="pill" data-bs-target="#bai3" type="button"
+                    role="tab" aria-controls="bai3" aria-selected="false">Bài tập 3</button>
+                <button class="nav-link" id="bai4-tab" data-bs-toggle="pill" data-bs-target="#bai4" type="button"
+                    role="tab" aria-controls="bai4" aria-selected="false">Bài tập 4</button>
+            </div>
+            <div class="tab-content w-100" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="bai1" role="tabpanel" aria-labelledby="bai1-tab">
+                    <h2>Quản Lý Tuyển Sinh</h2>
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="cutoffScore">Điểm Chuẩn:</label>
+                                <input type="number" class="form-control" id="cutoffScore" name="cutoffScore">
+                            </div>
+                        </div>
+                       
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="area">Khu Vực:</label>
+                                <select class="form-select" id="area" name="area">
+                                    <option value="A">A</option>
+                                    <option value="B">B</option>
+                                    <option value="C">C</option>
+                                    <option value="X">X</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="priorityType">Đối Tượng Ưu Tiên:</label>
+                                <select class="form-select" id="priorityType" name="priorityType">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="0">0</option>
+                                </select>
+                            </div>
+                        </div> <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="score1">Điểm Môn 1:</label>
+                                <input type="number" class="form-control" id="score1" name="score1">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="score2">Điểm Môn 2:</label>
+                                <input type="number" class="form-control" id="score2" name="score2">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="score3">Điểm Môn 3:</label>
+                                <input type="number" class="form-control" id="score3" name="score3">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary" onclick="calculateAdmission()">Kiểm Tra Tuyển Sinh</button>
+                        </div>
+                        <div class="col-12">
+                            <p id="result"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="bai2" role="tabpanel" aria-labelledby="bai2-tab">
+
+                </div>
+                <div class="tab-pane fade" id="bai3" role="tabpanel" aria-labelledby="bai3-tab">
+
+                </div>
+                <div class="tab-pane fade" id="bai4" role="tabpanel" aria-labelledby="bai4-tab">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
