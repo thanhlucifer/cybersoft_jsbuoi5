@@ -108,3 +108,52 @@ function calculateTax() {
     const resultText = `Khách hàng ${fullname} phải trả: ${formatCurrency(tax)} cho thu nhập chịu thuế là ${formatCurrency(taxableIncome)}.`;
     document.getElementById('result3').innerText = resultText;
 }
+
+//tinh tien cap
+function toggleConnections() {
+    const customerType = document.getElementById('customerType').value;
+    const connectionsGroup = document.getElementById('connectionsGroup');
+    if (customerType === 'business') {
+        connectionsGroup.style.display = 'block';
+    } else {
+        connectionsGroup.style.display = 'none';
+    }
+}
+
+function calculateCableBill() {
+    const customerId = document.getElementById('customerId').value;
+    const customerType = document.getElementById('customerType').value;
+    const channels = parseInt(document.getElementById('channels').value) || 0;
+    let connections = 0;
+    if (customerType === 'business') {
+        connections = parseInt(document.getElementById('connections').value) || 0;
+    }
+
+    const RESIDENTIAL_PROCESSING_FEE = 4.5;
+    const RESIDENTIAL_BASIC_SERVICE_FEE = 20.5;
+    const RESIDENTIAL_PREMIUM_CHANNEL_FEE = 7.5;
+    
+    const BUSINESS_PROCESSING_FEE = 15;
+    const BUSINESS_BASIC_SERVICE_FEE = 75;
+    const BUSINESS_PREMIUM_CHANNEL_FEE = 50;
+    const BUSINESS_ADDITIONAL_CONNECTION_FEE = 5;
+    const BUSINESS_BASIC_CONNECTION_LIMIT = 10;
+    
+    let total = 0;
+
+    if (customerType === 'residential') {
+        total = RESIDENTIAL_PROCESSING_FEE + 
+                RESIDENTIAL_BASIC_SERVICE_FEE + 
+                (RESIDENTIAL_PREMIUM_CHANNEL_FEE * channels);
+    } else if (customerType === 'business') {
+        let basicServiceFee = BUSINESS_BASIC_SERVICE_FEE;
+        if (connections > BUSINESS_BASIC_CONNECTION_LIMIT) {
+            basicServiceFee += (connections - BUSINESS_BASIC_CONNECTION_LIMIT) * BUSINESS_ADDITIONAL_CONNECTION_FEE;
+        }
+        total = BUSINESS_PROCESSING_FEE + 
+                basicServiceFee + 
+                (BUSINESS_PREMIUM_CHANNEL_FEE * channels);
+    }
+
+    document.getElementById('result4').innerText = `Mã Khách Hàng: ${customerId}\nTổng tiền cáp là: $${total.toFixed(2)}`;
+}
