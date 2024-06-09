@@ -15,182 +15,193 @@
 
 <body>
     <div class="container py-5">
-        <div class="d-flex align-items-start">
-            <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                <button class="nav-link active button-56 m-3" id="bai1-tab" data-bs-toggle="pill" data-bs-target="#bai1" type="button"
-                    role="tab" aria-controls="bai1" aria-selected="true">Bài tập 1</button>
-                <button class="nav-link button-56 m-3" id="bai2-tab" data-bs-toggle="pill" data-bs-target="#bai2" type="button"
-                    role="tab" aria-controls="bai2" aria-selected="false">Bài tập 2</button>
-                <button class="nav-link button-56 m-3" id="bai3-tab" data-bs-toggle="pill" data-bs-target="#bai3" type="button"
-                    role="tab" aria-controls="bai3" aria-selected="false">Bài tập 3</button>
-                <button class="nav-link button-56 m-3" id="bai4-tab" data-bs-toggle="pill" data-bs-target="#bai4" type="button"
-                    role="tab" aria-controls="bai4" aria-selected="false">Bài tập 4</button>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <button class="nav-link active button-56 m-3" id="bai1-tab" data-bs-toggle="pill"
+                        data-bs-target="#bai1" type="button" role="tab" aria-controls="bai1" aria-selected="true">Bài tập 1</button>
+                    <button class="nav-link button-56 m-3" id="bai2-tab" data-bs-toggle="pill" data-bs-target="#bai2"
+                        type="button" role="tab" aria-controls="bai2" aria-selected="false">Bài tập 2</button>
+                    <button class="nav-link button-56 m-3" id="bai3-tab" data-bs-toggle="pill" data-bs-target="#bai3"
+                        type="button" role="tab" aria-controls="bai3" aria-selected="false">Bài tập 3</button>
+                    <button class="nav-link button-56 m-3" id="bai4-tab" data-bs-toggle="pill" data-bs-target="#bai4"
+                        type="button" role="tab" aria-controls="bai4" aria-selected="false">Bài tập 4</button>
+                </div>
             </div>
-            <div class="tab-content w-100" id="v-pills-tabContent">
-                <div class="tab-pane fade show active" id="bai1" role="tabpanel" aria-labelledby="bai1-tab">
-                    <div class="card">
-                        <div class="card-header">
-                            <h2>Quản Lý Tuyển Sinh</h2>
-                        </div>
-                        <div class="card-body">
-                            <div class="row g-3">
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="cutoffScore">Điểm Chuẩn:</label>
-                                        <input type="number" class="form-control" id="cutoffScore" name="cutoffScore">
+            <div class="col-md-9">
+                <div class="tab-content w-100" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="bai1" role="tabpanel" aria-labelledby="bai1-tab">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2>Quản Lý Tuyển Sinh</h2>
+                            </div>
+                            <div class="card-body">
+                                <div class="row g-3">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="cutoffScore">Điểm Chuẩn:</label>
+                                            <input type="number" class="form-control" id="cutoffScore"
+                                                name="cutoffScore">
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="area">Khu Vực:</label>
-                                        <select class="form-select" id="area" name="area">
-                                            <option value="A">A</option>
-                                            <option value="B">B</option>
-                                            <option value="C">C</option>
-                                            <option value="X">X</option>
-                                        </select>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="area">Khu Vực:</label>
+                                            <select class="form-select" id="area" name="area">
+                                                <option value="A">A</option>
+                                                <option value="B">B</option>
+                                                <option value="C">C</option>
+                                                <option value="X">X</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="priorityType">Đối Tượng Ưu Tiên:</label>
-                                        <select class="form-select" id="priorityType" name="priorityType">
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="0">0</option>
-                                        </select>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="priorityType">Đối Tượng Ưu Tiên:</label>
+                                            <select class="form-select" id="priorityType" name="priorityType">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="0">0</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="score1">Điểm Môn 1:</label>
-                                        <input type="number" class="form-control" id="score1" name="score1">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="score1">Điểm Môn 1:</label>
+                                            <input type="number" class="form-control" id="score1" name="score1">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="score2">Điểm Môn 2:</label>
-                                        <input type="number" class="form-control" id="score2" name="score2">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="score2">Điểm Môn 2:</label>
+                                            <input type="number" class="form-control" id="score2" name="score2">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="score3">Điểm Môn 3:</label>
-                                        <input type="number" class="form-control" id="score3" name="score3">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="score3">Điểm Môn 3:</label>
+                                            <input type="number" class="form-control" id="score3" name="score3">
+                                        </div>
                                     </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-primary button-85" onclick="calculateAdmission()">Kiểm
+                                            Tra Tuyển
+                                            Sinh</button>
+                                    </div>
+                                    <div id="result" class="mt-3 result-style"></div>
                                 </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary button-85" onclick="calculateAdmission()">Kiểm Tra Tuyển
-                                        Sinh</button>
-                                </div>
-                                <div id="result" class="mt-3 result-style"></div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="tab-pane fade" id="bai2" role="tabpanel" aria-labelledby="bai2-tab">
-                    <div class="card">
-                        <div class="card-header">
-                            <h2>Tính Tiền Điện</h2>
+                    <div class="tab-pane fade" id="bai2" role="tabpanel" aria-labelledby="bai2-tab">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2>Tính Tiền Điện</h2>
+                            </div>
+                            <div class="card-body">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="name">Tên:</label>
+                                            <input type="text" class="form-control" id="name" name="name">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="kwh">Số kWh tiêu thụ:</label>
+                                            <input type="number" class="form-control" id="kwh" name="kwh">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn button-85" onclick="calculateElectricityBill()">Tính
+                                            Tiền</button>
+                                    </div>
+                                    <div id="result2" class="mt-3 result-style"></div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="name">Tên:</label>
-                                        <input type="text" class="form-control" id="name" name="name">
+                    </div>
+                    <div class="tab-pane fade" id="bai3" role="tabpanel" aria-labelledby="bai3-tab">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2>Tính Thuế Thu Nhập Cá Nhân</h2>
+                            </div>
+                            <div class="card-body">
+                                <div class="row g-3">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="fullname">Họ Tên:</label>
+                                            <input type="text" class="form-control" id="fullname" name="fullname">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="kwh">Số kWh tiêu thụ:</label>
-                                        <input type="number" class="form-control" id="kwh" name="kwh">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="totalIncome">Tổng Thu Nhập Năm (triệu):</label>
+                                            <input type="number" class="form-control" id="totalIncome"
+                                                name="totalIncome">
+                                        </div>
                                     </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="dependents">Số Người Phụ Thuộc:</label>
+                                            <input type="number" class="form-control" id="dependents" name="dependents">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-primary button-85" onclick="calculateTax()">Tính
+                                            Thuế</button>
+                                    </div>
+                                    <div id="result3" class="mt-3 result-style"></div>
                                 </div>
-                                <div class="col-12">
-                                    <button class="btn button-85" onclick="calculateElectricityBill()">Tính
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="bai4" role="tabpanel" aria-labelledby="bai4-tab">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2>Tính Tiền Cáp</h2>
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="row mb-3">
+                                        <div class="col-md-6">
+                                            <label for="customerId" class="form-label">Mã Khách Hàng:</label>
+                                            <input type="text" id="customerId" class="form-control">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="customerType" class="form-label">Loại Khách Hàng:</label>
+                                            <select id="customerType" class="form-select"
+                                                onchange="toggleConnections()">
+                                                <option value="residential">Nhà Dân</option>
+                                                <option value="business">Doanh Nghiệp</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-md-6">
+                                            <label for="channels" class="form-label">Số Kênh Cao Cấp:</label>
+                                            <input type="number" id="channels" class="form-control" min="0">
+                                        </div>
+                                        <div class="col-md-6" id="connectionsGroup" style="display: none;">
+                                            <label for="connections" class="form-label">Số Kết Nối:</label>
+                                            <input type="number" id="connections" class="form-control" min="0">
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-primary button-85"
+                                        onclick="calculateCableBill()">Tính
                                         Tiền</button>
-                                </div>
-                                <div id="result2" class="mt-3 result-style"></div>
+                                </form>
+                                <div id="result4" class="mt-3 result-style"></div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="tab-pane fade" id="bai3" role="tabpanel" aria-labelledby="bai3-tab">
-                    <div class="card">
-                        <div class="card-header">
-                            <h2>Tính Thuế Thu Nhập Cá Nhân</h2>
-                        </div>
-                        <div class="card-body">
-                            <div class="row g-3">
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="fullname">Họ Tên:</label>
-                                        <input type="text" class="form-control" id="fullname" name="fullname">
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="totalIncome">Tổng Thu Nhập Năm (triệu):</label>
-                                        <input type="number" class="form-control" id="totalIncome" name="totalIncome">
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="dependents">Số Người Phụ Thuộc:</label>
-                                        <input type="number" class="form-control" id="dependents" name="dependents">
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary button-85" onclick="calculateTax()">Tính Thuế</button>
-                                </div>
-                                <div id="result3" class="mt-3 result-style"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="bai4" role="tabpanel" aria-labelledby="bai4-tab">
-                    <div class="card">
-                        <div class="card-header">
-                            <h2>Tính Tiền Cáp</h2>
-                        </div>
-                        <div class="card-body">
-                            <form>
-                                <div class="row mb-3">
-                                    <div class="col-md-6">
-                                        <label for="customerId" class="form-label">Mã Khách Hàng:</label>
-                                        <input type="text" id="customerId" class="form-control">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="customerType" class="form-label">Loại Khách Hàng:</label>
-                                        <select id="customerType" class="form-select" onchange="toggleConnections()">
-                                            <option value="residential">Nhà Dân</option>
-                                            <option value="business">Doanh Nghiệp</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <div class="col-md-6">
-                                        <label for="channels" class="form-label">Số Kênh Cao Cấp:</label>
-                                        <input type="number" id="channels" class="form-control" min="0">
-                                    </div>
-                                    <div class="col-md-6" id="connectionsGroup" style="display: none;">
-                                        <label for="connections" class="form-label">Số Kết Nối:</label>
-                                        <input type="number" id="connections" class="form-control" min="0">
-                                    </div>
-                                </div>
-                                <button type="button" class="btn btn-primary button-85" onclick="calculateCableBill()">Tính
-                                    Tiền</button>
-                            </form>
-                            <div id="result4" class="mt-3 result-style"></div>
-                        </div>
-                    </div>
-                </div>
 
+                </div>
             </div>
         </div>
+    </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
